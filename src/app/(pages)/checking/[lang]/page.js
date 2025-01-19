@@ -21,7 +21,7 @@ function EnglishChecking() {
 							type='text'
 							id='parentName'
 							name='parentName'
-							// autoComplete='off'
+							autoComplete='off'
 							placeholder='Enter parent name'
 						/>
 					</div>
@@ -36,7 +36,7 @@ function EnglishChecking() {
 							type='tel'
 							id='phoneNumber'
 							name='phoneNumber'
-							// autoComplete='off'
+							autoComplete='off'
 							placeholder='Enter phone number'
 						/>
 					</div>
@@ -51,7 +51,7 @@ function EnglishChecking() {
 							type='text'
 							id='studentName'
 							name='studentName'
-							// autoComplete='off'
+							autoComplete='off'
 							placeholder='Enter student name'
 						/>
 					</div>
@@ -66,7 +66,7 @@ function EnglishChecking() {
 							type='number'
 							id='studentClass'
 							name='studentClass'
-							// autoComplete='off'
+							autoComplete='off'
 							placeholder='Enter student class'
 						/>
 					</div>
@@ -81,7 +81,7 @@ function EnglishChecking() {
 							type='number'
 							id='studentId'
 							name='studentId'
-							// autoComplete='off'
+							autoComplete='off'
 							placeholder='Enter student ID'
 						/>
 					</div>
