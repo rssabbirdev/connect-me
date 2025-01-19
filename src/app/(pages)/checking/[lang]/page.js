@@ -21,6 +21,8 @@ function EnglishChecking() {
 							type='text'
 							id='parentName'
 							name='parentName'
+							// autoComplete='off'
+							placeholder='Enter parent name'
 						/>
 					</div>
 					<div className='grid grid-cols-5 gap-3 items-center'>
@@ -34,6 +36,8 @@ function EnglishChecking() {
 							type='tel'
 							id='phoneNumber'
 							name='phoneNumber'
+							// autoComplete='off'
+							placeholder='Enter phone number'
 						/>
 					</div>
 					<div className='grid grid-cols-5 gap-3 items-center'>
@@ -47,6 +51,8 @@ function EnglishChecking() {
 							type='text'
 							id='studentName'
 							name='studentName'
+							// autoComplete='off'
+							placeholder='Enter student name'
 						/>
 					</div>
 					<div className='grid grid-cols-5 gap-3 items-center'>
@@ -57,9 +63,11 @@ function EnglishChecking() {
 						<input
 							required
 							className='col-span-3 border border-black p-1 rounded'
-							type='text'
+							type='number'
 							id='studentClass'
 							name='studentClass'
+							// autoComplete='off'
+							placeholder='Enter student class'
 						/>
 					</div>
 					<div className='grid grid-cols-5 gap-3 items-center'>
@@ -70,9 +78,11 @@ function EnglishChecking() {
 						<input
 							required
 							className='col-span-3 border border-black p-1 rounded'
-							type='text'
+							type='number'
 							id='studentId'
 							name='studentId'
+							// autoComplete='off'
+							placeholder='Enter student ID'
 						/>
 					</div>
 
