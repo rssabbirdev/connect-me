@@ -2,7 +2,7 @@
 import Loading from '@/app/components/Loading/Loading';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 
 function OptionsPage() {
 	const searchParams = useSearchParams();
@@ -52,4 +52,10 @@ function OptionsPage() {
 	);
 }
 
-export default OptionsPage;
+export default function OptionsPageWithSuspense() {
+	return (
+		<Suspense fallback={<Loading />}>
+			<OptionsPage />
+		</Suspense>
+	);
+}

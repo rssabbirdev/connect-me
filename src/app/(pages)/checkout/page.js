@@ -1,7 +1,7 @@
 'use client';
 import Loading from '@/app/components/Loading/Loading';
 import { useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 
 function CheckoutPage() {
 	const searchParams = useSearchParams();
@@ -59,4 +59,10 @@ function CheckoutPage() {
 	);
 }
 
-export default CheckoutPage;
+export default function CheckoutPageWithSuspense() {
+	return (
+		<Suspense fallback={<Loading />}>
+			<CheckoutPage />
+		</Suspense>
+	);
+}
