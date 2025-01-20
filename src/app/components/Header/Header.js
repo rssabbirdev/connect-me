@@ -1,19 +1,24 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { FaCalendarAlt, FaClock } from 'react-icons/fa';
+import { IoArrowBackSharp } from 'react-icons/io5';
 
 function Header() {
+	const pathname = usePathname();
 	const [currentTime, setCurrentTime] = useState(new Date());
 
 	useEffect(() => {
-		const timer = setInterval(() => {
-			setCurrentTime(new Date());
-		}, 1000);
+		if (pathname === '/') {
+			const timer = setInterval(() => {
+				setCurrentTime(new Date());
+			}, 1000);
 
-		return () => clearInterval(timer);
-	}, []);
+			return () => clearInterval(timer);
+		}
+	}, [pathname]);
 
 	const formatDate = (date) => {
 		return date.toLocaleDateString('en-US', {
@@ -34,26 +39,34 @@ function Header() {
 	};
 
 	return (
-		<div className='w-full flex justify-center py-2 px-3'>
+		<div className='w-full flex justify-between py-2 px-3'>
 			{/* Date and Time Display */}
-			<div className='w-full mb-8 flex flex-col'>
-				<div className='inline-flex items-center space-x-2 text-blue-900 mb-2'>
-					<FaCalendarAlt />
-					<span className='text-lg'>{formatDate(currentTime)}</span>
+			{pathname === '/' ? (
+				<div className=' mb-8 flex flex-col  bg-opacity-15 p-3 rounded-2xl'>
+					<div className='inline-flex items-center space-x-2 text-blue-900 mb-2'>
+						<FaCalendarAlt />
+						<span className='text-lg'>
+							{formatDate(currentTime)}
+						</span>
+					</div>
+					<div className='inline-flex items-center space-x-2 text-blue-900'>
+						<FaClock />
+						<span className='text-2xl font-mono'>
+							{formatTime(currentTime)}
+						</span>
+					</div>
 				</div>
-				<div className='inline-flex items-center space-x-2 text-blue-900'>
-					<FaClock />
-					<span className='text-2xl font-mono'>
-						{formatTime(currentTime)}
-					</span>
+			) : (
+				<div>
+					<IoArrowBackSharp className='text-3xl mt-6 ml-4 hover:cursor-pointer hover:-translate-x-1 transition-all duration-500 w-12 h-8 rounded-xl hover:rounded-lg text-center text-white shadow-md  bg-gradient-to-tl from-green-500 via-blue-500 to-indigo-400 bg-size-200 bg-pos-0 hover:bg-pos-100' />
 				</div>
-			</div>
+			)}
 			<Link href='/'>
 				<Image
 					className=''
 					src='/ATS_Logo-Final.png'
 					alt='logo'
-					width={200}
+					width={150}
 					height={38}
 				/>
 			</Link>

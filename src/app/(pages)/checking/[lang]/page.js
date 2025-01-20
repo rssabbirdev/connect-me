@@ -17,7 +17,7 @@ function EnglishChecking() {
 						</label>
 						<input
 							required
-							className='col-span-3 border border-black p-1 rounded'
+							className='col-span-3 backdrop-blur-0 outline-blue-300 outline-offset-1 border border-blue-200 font-mono bg-[#ffffffb0] p-1 rounded'
 							type='text'
 							id='parentName'
 							name='parentName'
@@ -32,7 +32,7 @@ function EnglishChecking() {
 
 						<input
 							required
-							className='col-span-3 border border-black p-1 rounded'
+							className='col-span-3 backdrop-blur-0 outline-blue-300 outline-offset-1 border border-blue-200 font-mono bg-[#ffffffb0] p-1 rounded'
 							type='tel'
 							id='phoneNumber'
 							name='phoneNumber'
@@ -47,7 +47,7 @@ function EnglishChecking() {
 
 						<input
 							required
-							className='col-span-3 border border-black p-1 rounded'
+							className='col-span-3 backdrop-blur-0 outline-blue-300 outline-offset-1 border border-blue-200 font-mono bg-[#ffffffb0] p-1 rounded'
 							type='text'
 							id='studentName'
 							name='studentName'
@@ -62,7 +62,7 @@ function EnglishChecking() {
 
 						<input
 							required
-							className='col-span-3 border border-black p-1 rounded'
+							className='col-span-3 backdrop-blur-0 outline-blue-300 outline-offset-1 border border-blue-200 font-mono bg-[#ffffffb0] p-1 rounded'
 							type='number'
 							id='studentClass'
 							name='studentClass'
@@ -77,7 +77,7 @@ function EnglishChecking() {
 
 						<input
 							required
-							className='col-span-3 border border-black p-1 rounded'
+							className='col-span-3 backdrop-blur-0 outline-blue-300 outline-offset-1 border border-blue-200 font-mono bg-[#ffffffb0] p-1 rounded'
 							type='number'
 							id='studentId'
 							name='studentId'
@@ -88,7 +88,7 @@ function EnglishChecking() {
 
 					<div className='flex justify-center '>
 						<input
-							className='mt-10 px-5 py-2 border border-black hover:bg-slate-500 hover:border-slate-500 hover:text-white hover:cursor-pointer transition-all'
+							className='mt-10 rounded-2xl hover:rounded-lg px-10 py-3 text-center text-white shadow-md transition-all duration-500 bg-gradient-to-tl from-green-500 via-blue-500 to-indigo-400 bg-size-200 bg-pos-0 hover:bg-pos-100 hover:-translate-y-1 hover:cursor-pointer'
 							type='submit'
 							value='Next'
 						/>
