@@ -10,10 +10,13 @@ function CheckoutPage() {
 	const [selectedOption, setSelectedOption] = useState();
 	const [loading, setLoading] = useState(true);
 	const redirectTimer = useState(20);
+	const lang = searchParams.get('lang');
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const response = await fetch('/optionData.json');
+			const response = await fetch(
+				`${lang === 'en' ? 'optionData.json' : 'optionDataArabic.json'}`
+			);
 			const data = await response.json();
 			setOptions(data);
 			setSelectedOption(

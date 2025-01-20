@@ -13,11 +13,18 @@ async function EnglishChecking({ params }) {
 					</div>
 					<div className='text-2xl text-right'>
 						<Form
-							action={'/options/ar'}
+							action={'/options'}
 							scroll={false}
 							className='space-y-3'
 						>
 							<div className='grid grid-cols-5 gap-3 items-center'>
+								<input
+									className='hidden'
+									defaultValue={lang}
+									id='lang'
+									name='lang'
+									type='text'
+								/>
 								<label
 									className='col-span-2 order-2'
 									for='parentName'
@@ -134,6 +141,13 @@ async function EnglishChecking({ params }) {
 								<label className='col-span-2' for='parentName'>
 									Parent Name:
 								</label>
+								<input
+									className='hidden'
+									defaultValue={lang}
+									id='lang'
+									name='lang'
+									type='text'
+								/>
 								<input
 									required
 									className='col-span-3 backdrop-blur-0 outline-blue-300 outline-offset-1 border border-blue-200 font-mono bg-[#ffffffb0] p-1 rounded'
