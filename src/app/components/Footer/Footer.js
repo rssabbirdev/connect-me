@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 function Footer() {
 	return (
-		<div className='w-full py-4 bg-blue-500 shadow-lg absolute bottom-0'>
+		<div className='w-full py-4 bg-[#3b82f6ab] shadow-white shadow-2xl absolute bottom-0 backdrop-blur-sm'>
 			<div className='flex justify-around'>
 				<Link href='/' className='text-white text-2xl'>
 					<FaHome />
