@@ -1,13 +1,14 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 import { IoArrowBackSharp } from 'react-icons/io5';
 
 function Header() {
 	const pathname = usePathname();
+	const router = useRouter();
 	const [currentTime, setCurrentTime] = useState(new Date());
 
 	useEffect(() => {
@@ -58,7 +59,10 @@ function Header() {
 				</div>
 			) : (
 				<div>
-					<IoArrowBackSharp className='text-3xl mt-6 ml-4 hover:cursor-pointer hover:-translate-x-1 transition-all duration-500 w-12 h-8 rounded-xl hover:rounded-lg text-center text-white shadow-md  bg-gradient-to-tl from-green-500 via-blue-500 to-indigo-400 bg-size-200 bg-pos-0 hover:bg-pos-100' />
+					<IoArrowBackSharp
+						onClick={() => router.back()}
+						className='text-3xl mt-6 ml-4 hover:cursor-pointer hover:-translate-x-1 transition-all duration-500 w-12 h-8 rounded-xl hover:rounded-lg text-center text-white shadow-md  bg-gradient-to-tl from-green-500 via-blue-500 to-indigo-400 bg-size-200 bg-pos-0 hover:bg-pos-100'
+					/>
 				</div>
 			)}
 			<Link href='/'>

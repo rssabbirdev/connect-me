@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang='en'>
+		<html lang='en' translate='no'>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col items-center min-h-screen relative bg-university-bg bg-no-repeat bg-cover backdrop-blur layout-bg`}
 			>
