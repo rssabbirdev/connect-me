@@ -9,7 +9,7 @@ function CheckoutPage() {
 	const [options, setOptions] = useState();
 	const [selectedOption, setSelectedOption] = useState();
 	const [loading, setLoading] = useState(true);
-	const redirectTimer = useState(20000);
+	const redirectTimer = useState(20);
 
 	useEffect(() => {
 		const fetchData = async () => {
