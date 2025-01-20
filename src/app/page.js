@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,13 +12,13 @@ export default function Home() {
 			</div>
 			<div className='flex flex-col gap-5 w-2/4'>
 				<Link
-					className='border border-black rounded-full px-10 py-2 hover:bg-slate-500 hover:text-white hover:border-slate-500 transition-all text-center'
+					className='rounded-2xl hover:rounded-lg px-10 py-3 text-center text-white shadow-md transition-all duration-500 bg-gradient-to-tl from-green-500 via-blue-500 to-indigo-400 bg-size-200 bg-pos-0 hover:bg-pos-100 hover:-translate-y-1'
 					href={'/checking/en'}
 				>
 					English
 				</Link>
 				<Link
-					className='border border-black rounded-full px-10 py-2 hover:bg-slate-500 hover:text-white hover:border-slate-500 transition-all text-center'
+					className='rounded-2xl hover:rounded-lg px-10 py-3 text-center text-white shadow-md transition-all duration-500 bg-gradient-to-tl from-green-500 via-blue-500 to-indigo-400 bg-size-200 bg-pos-0 hover:bg-pos-100 hover:-translate-y-1'
 					href={'/checking/ar'}
 				>
 					Arabic

@@ -36,7 +36,7 @@ function Header() {
 	return (
 		<div className='w-full flex justify-center py-2 px-3'>
 			{/* Date and Time Display */}
-			<div className='w-full mb-8'>
+			<div className='w-full mb-8 flex flex-col'>
 				<div className='inline-flex items-center space-x-2 text-blue-900 mb-2'>
 					<FaCalendarAlt />
 					<span className='text-lg'>{formatDate(currentTime)}</span>
