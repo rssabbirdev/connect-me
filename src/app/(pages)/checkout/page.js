@@ -2,13 +2,14 @@
 import Loading from '@/app/components/Loading/Loading';
 import { useSearchParams } from 'next/navigation';
 import React, { Suspense, useEffect, useState } from 'react';
+import { FaRegSmileBeam } from 'react-icons/fa';
 
 function CheckoutPage() {
 	const searchParams = useSearchParams();
 	const [options, setOptions] = useState();
 	const [selectedOption, setSelectedOption] = useState();
 	const [loading, setLoading] = useState(true);
-	const redirectTimer = useState(20);
+	const redirectTimer = useState(20000);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -41,9 +42,16 @@ function CheckoutPage() {
 	return (
 		<div className='text-center'>
 			<div>
-				<p className='row-span-1 border border-black p-3'>
-					{selectedOption?.title}
+				<FaRegSmileBeam className='text-center w-full text-[120px] mb-10 text-green-500' />
+				<p className='text-lg'>
+					Mr/Ms: {searchParams.get('parentName')} we received your
+					request about{' '}
+					<span className='font-bold'>{selectedOption?.title}</span>
 				</p>
+
+				{/* <p className='row-span-1 border border-black p-3'>
+					{selectedOption?.title}
+				</p> */}
 			</div>
 			<div>
 				{selectedOption?.message?.map((message, index) => (
