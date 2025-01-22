@@ -29,7 +29,7 @@ async function EnglishChecking({ params }) {
 									className='col-span-2 order-2'
 									for='parentName'
 								>
-									اسم الوالدين
+									: اسم ولي الامر
 								</label>
 								<input
 									required
@@ -46,7 +46,7 @@ async function EnglishChecking({ params }) {
 									className='col-span-2 order-2'
 									for='phoneNumber'
 								>
-									رقم التليفون
+									: رقم الهاتف
 								</label>
 
 								<input
@@ -64,7 +64,7 @@ async function EnglishChecking({ params }) {
 									className='col-span-2 order-2'
 									for='studentName'
 								>
-									اسم الطالب
+									: اسم الطالب
 								</label>
 
 								<input
@@ -82,7 +82,7 @@ async function EnglishChecking({ params }) {
 									className='col-span-2 order-2'
 									for='studentClass'
 								>
-									فئة الطالب
+									: صف الطالب
 								</label>
 
 								<input
@@ -100,7 +100,7 @@ async function EnglishChecking({ params }) {
 									className='col-span-2 order-2'
 									for='studentId'
 								>
-									معرف الطالب
+									: رقم الطالب
 								</label>
 
 								<input
